@@ -1,9 +1,6 @@
 import java.util.concurrent.atomic.AtomicInteger;
 
 import io.vertx.core.Vertx;
-import io.vertx.core.VertxOptions;
-import io.vertx.core.buffer.Buffer;
-import io.vertx.core.dns.AddressResolverOptions;
 import io.vertx.core.http.HttpClient;
 import io.vertx.core.http.HttpClientOptions;
 
@@ -19,12 +16,9 @@ public class Main {
 		final boolean isVerbose = Boolean.parseBoolean(args[5]);
 		final long delay = Integer.parseInt(args[6]);
 		final long loop = Integer.parseInt(args[7]);
-		final String ipAddressResolver = args[8];
-		final String hostnameAddressResolver = args[9];
 
-		//Vertx vertx = Vertx.vertx();
-		Vertx vertx = Vertx.vertx(new VertxOptions().setAddressResolverOptions(new AddressResolverOptions().
-		        setHostsValue(Buffer.buffer(ipAddressResolver + " " + hostnameAddressResolver))));
+		final Vertx vertx = Vertx.vertx();
+		//Vertx vertx = Vertx.vertx(new VertxOptions().setAddressResolverOptions(new AddressResolverOptions().setHostsValue(Buffer.buffer(ipAddressResolver + " " + hostnameAddressResolver))));
 		
 		final AtomicInteger success = new AtomicInteger();
 		final AtomicInteger failure = new AtomicInteger();

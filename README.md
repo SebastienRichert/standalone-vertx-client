@@ -2,7 +2,7 @@
 
 ## Command line syntax
 
-java -jar standalone-vertx-client.jar <ip> <port> <isSSL> <isTrustAll> <isVerifyHost> <isVerbose> <delayMs> <loop>
+java -jar standalone-vertx-client.jar <ip> <port> <isSSL> <isTrustAll> <isVerifyHost> <isVerbose> <delayMs> <loop> <ipAddressResolver> 
 
 ## Example
 
