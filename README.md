@@ -1,1 +1,1 @@
-"# standalone-vertx-client" 
+# standalone-vertx-client
